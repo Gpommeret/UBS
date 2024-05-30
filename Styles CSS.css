@@ -1,0 +1,349 @@
+
+body, html {
+    height:100%;font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+        flex-direction:column;
+}
+*{box-sizing: border-box;
+}
+.containerleftright{
+    display:flex;
+    justify-content: space-between;
+    width:90%;
+    margin: 5px auto;
+    }
+.left,.center, .right{
+    width: 60%;
+    padding: 5px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-block: auto;
+    background-color:whitesmoke; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+.bg-img {
+    /*ajouter à l'image*/
+    background-image: url("ETNA.jpg"); 
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*Ajouter des styles au conteneur de formulaire*/
+.container{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+}
+
+/*Champs de saisie*/
+input[type=text], input[type=password]{
+    width:100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+/*Définir le style pour le boutton d'envoi*/
+.btn{
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor:pointer;
+    width:100%;
+    opacity: 0.9;
+}
+.btn:hover{
+opacity: 1;
+}
+p,h3{
+    color:dimgray;
+    font-size:18px;
+    font-family:Arial;
+}
+.button-style{
+        background-color:green;/*Couleur de fond*/
+        border: none;/*Pas de bordure*/
+        color: white;/*Couleur de police*/
+        padding: 15px 32px;/*Espacement interne*/
+        text-align: center; /*Alignement du texte*/
+        text-decoration: none;/*Pas de soulignement*/
+        display: inline-block;/*Type d'affichage*/
+        font-size:18px;/*Taille de police*/
+        margin: 4px 2px;/*Marges externes*/
+        cursor: pointer;/*Type de curseur*/
+        font-weight: bold;/*Appliquer le style gras*/
+        font-family:arial;/*Choix de la police*/
+}
+a{
+color:green; 
+font-size: 18px; 
+font-family:arial;
+}
+a1{
+color:green; 
+font-size: 16px;
+font-family:arial;
+text-decoration: none;
+}
+span{
+color:dimgray;
+}
+h2{
+color:green;
+font-size:18px;
+font-family:arial;
+}
+.section1{
+background-color:whitesmoke; 
+background-position: center; 
+color:dimgray; 
+width: 250px;
+height : auto; 
+font-size:18px; 
+font-family:arial;
+padding:20px;
+margin:10px;
+}
+.section2{
+background-color:whitesmoke; 
+background-position: center;  
+width: 250px;
+height : auto;  
+font-family:arial;
+font-weight: bold;
+padding:20px;
+margin:10px;
+    p{
+        color:green;
+        font-size:18px;
+    }
+}
+.section3{
+background-color:whitesmoke; 
+background-position: center;  
+width: 250px;
+height : auto; 
+font-size:16px; 
+font-family:arial;
+padding:20px;
+margin:10px;
+}
+.main{
+display:flex;
+    flex:1;
+    Width:70%;/*Ajouter des marges de 15 % de chaque côtés du texte*/
+    margin: 20px auto ;
+}
+.sectionsleft{
+width: 40px;
+display: flex;
+flex-direction: column;
+padding: 20px;
+background-color:whitesmoke; 
+background-position: center; 
+width: 230px;
+padding: 10px;
+margin:10px;
+}
+.containerleftright{
+display:flex;
+justify-content: space-between;
+width:70%;
+margin: 5px auto;
+}
+.left, .right{
+width: 60%;
+padding: 5px;
+}
+.button-container{
+margin: 20px 0;
+width:70%;
+margin: 5px auto;
+}
+
+/*Page 2 : Média*/
+
+
+.containerMedia{
+    width: 80%;
+    margin: auto; /*centrer le contenu*/
+}
+
+.video-container{
+    display: flex;
+    justify-content: space-around; /*espacement égal entre les vidéos*/
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video{
+    flex: 1;
+    margin: 10px;
+}
+
+.iframe{/*Balise pour intégrer la vidéo youtube avec des attributs*/
+    width: 100%;
+    height: 350px;
+}
+
+/*Page 3 : Cérémonie*/
+
+
+.button-container{
+    margin: 20px 0;
+    width: 70%;
+    margin: 5px auto;
+}
+
+.containerceremony{
+    width: 70%;
+    margin: auto;
+}
+
+.button-ceremony{
+    background-color: green;
+    color: white;
+    border: 5px solid black;
+    padding: 15px 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px green;
+    font-family: arial;
+}
+
+.backbutton {
+    background-color: green;
+    color: white;
+    border: 5px solid black;
+    padding: 10px 10px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px green;
+    font-family: 'Times New Roman', Times, serif;  
+    cursor: pointer;
+}
+ 
+.container-informations {
+    width: 80%;
+    margin: 2px auto; /* centre le contenue*/
+    padding: 30 px;
+}
+ 
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ 
+th {
+    text-align: left;
+}
+ 
+caption {
+    caption-side: top;
+    font-size: 18px;
+    margin-bottom: 10px; /* espace entre la légende et le tableau*/
+    font-weight: bold;
+    text-align: center;
+    color: rgb(36, 186, 36);
+}
+ 
+.third-table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+ 
+.third-table th:nth-child(even) {
+    background-color : rgba(150, 212, 212, 0.4)
+}
+ 
+.third-table tr:nth-child(even), .third-table td:nth-child(even) {
+    background-color : rgba(150, 212, 212, 0.4)
+}
+ 
+
+
+#myfooterJS{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;/*transformer le texte en majuscule*/
+    letter-spacing: 2px;
+}
+
+#myfooterJS:hover{ /* Lorsque l'élément "myfooter" est survolé*/
+    color: green;
+}
+
+#button-myfooter{
+    display: block; /*afficher en tant que bloc pour occuper toute la largeur*/
+    margin: 20px auto;
+    cursor: pointer;
+    background-color: lightblue;
+    color: black;
+    border: 5px solid black;
+    padding: 15px 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+}
+
+#button-myfooter:hover{
+    background-color: green;
+}
+
+/*Style pour l'Iframe*/
+#Iframe_ENSIBS {
+    border: 2px solid black;
+    border-radius: 5px; /*Coins arrondis*/
+}
+
+#Iframe_ENSBIS_a {
+    color: #2980b9;/*Couleur du texte des liens*/
+    text-decoration: none;  /*Supprime la décoration par défaut*/
+    font-weight: bold;  /*Texte en gras*/
+}
+#Iframe_ENSIBS_a:hover{
+    text-decoration: underline; /* Souligné au survol*/
+}
+
+#button-myfooter-informations{
+    background-color: lightblue; /*Couleur de fond du bouton*/
+}
+#button-myfooter-informations{
+    background-color: lightblue; /*Couleur de fond du bouton*/
+    color: black;
+    border: 5px solid black;
+    padding: 15px 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: 'Times New Roman';   
+}
+
+#button-myfooter-informations:hover {
+    background-color: lightblue; /*Couleur de fond du bouton*/
+}

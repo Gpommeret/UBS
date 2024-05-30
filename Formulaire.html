@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr" >
+    <head>
+        <Title>Formulaire</Title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Insérer un Favicon-->
+    <link rel="shortcut icon" href="icone ensibs.jpg" type="image/x-icon">
+    </head>
+    <!--Code CSS-->
+    <!--Insérer un formulaire-->
+   <link rel="stylesheet" href="CSS Formulaire.css">
+   <script src="JS Formulaire.js"></script>
+    <!--Code HTML-->
+    <body>
+        <h1>Formulaire de prise de contact</h1>
+        <form action="contact-form" onsubmit="SubmitEvent(event)">
+        <!--Champs de texte-->
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+            <br>
+            <br>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required>
+            <br>
+            <br>
+
+        <!--Champs d'email-->
+        <label for="email">Email :</label>
+        <input type="text" id="email" name="email" required>
+            <br>
+            <br>
+
+        <!--Champs de date-->
+        <label for="date">Date de naissance :</label>
+        <input type="date" id="date" name="date" required>
+            <br>
+            <br> 
+        
+        <!--Case à choisir-->
+        <label for="formations">Formations souhaitées à l'ENSIBS :</label>
+            <select type="text" id="date" name="date" required>
+                <option value="Cyberdéfense">Cyberdéfense</option>
+                <option value="Energies, Hydrogène">Energies, Hydrogène</option>
+                <option value="Génie Civil 4.0">Genie Civil 4.0</option>
+                <option value="Génie Industriel 4.0">Genie Industriel 4.0</option>
+                <option value="Informatique et CyberSécurité">Informatique et CyberSécurité</option>
+                <option value="Mécatronique">Mécatronique</option>
+            </select>
+                <br>    
+                <br> 
+            <!--Buton radio-->
+            <p>Actuellement, vous êtes en :</p>
+            <input type="radio" name="année" id="1ère" value="1ère" required>
+            <label for="1ère">en 1ère</label>
+                <br>    
+                <br> 
+            <input type="radio" name="année" id="teminale" value="teminale" required>
+            <label for="teminale">en teminale</label>
+                <br>    
+                <br>
+            <input type="radio" name="année" id="IUT" value="IUT" required>
+            <label for="IUT">en IUT</label>
+                <br>    
+                <br>
+            <input type="radio" name="année" id="Licence" value="Licence" required>
+            <label for="Licence">en Licence</label>
+                <br>    
+                <br>
+            <input type="radio" name="année" id="Master" value="Master" required>
+            <label for="Master">en Master</label>
+                    <br>    
+                    <br>
+            <input type="radio" name="année" id="Reprise" value="Reprise" required>
+            <label for="Reprise">en reprise d'études</label>
+                <br>    
+                <br>
+            <input type="radio" name="année" id="Autre" value="Autre" required>
+            <label for="Autre">Autre</label>
+                    <br>    
+                    <br>
+
+            <!--Case à cocher-->
+            <p>Langues parlées :</p>
+            <input type="checkbox" id="français" name="Langues" value="français">
+            <label for="français">Français</label>
+                <br>
+                <br>
+            <input type="checkbox" id="Anglais" name="Langues" value="Anglais">
+            <label for="Anglais">Anglais</label>
+                <br>
+                <br>
+            <input type="checkbox" id="Espagnol" name="Langues" value="Espagnol">
+            <label for="Espagnol">Espagnol</label>
+                <br>
+                <br>
+
+            <!--Zone de texte-->
+            <label for="demande">Vous avez une demande spécifique à formuler :</label>
+            <textarea name="demande" id="demande" rows="4" cols="50"></textarea>
+                <br>
+                <br>
+
+            <!--Captcha-->
+            <p>Veuillez résoudre l'opération suivante</p>
+            <span id="captcha"></span>
+            <input type="number" id="captcha-result" required>
+                <br>
+                <br>
+           
+            <!--Bouton de soumission-->
+            <input type="submit" value="Envoyer">
+        </form>
+    </body>
+</html>

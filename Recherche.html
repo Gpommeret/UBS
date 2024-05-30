@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <Title>Recherche</Title>
+    </head>
+    <Body>
+        <!--Lien vers la page-->
+        <a href="Alternance.html"><img src="logoGI.jpg" width="250" height="180" alt=""></a>
+        <h1> Moteur de recherche </h1>
+        
+        <!--Formulaire de saisie-->
+        <form id="formulairerechercheJS">
+            <!--Champs de saisie pour le mot-clef-->
+            <input type="text" id="recherchemot" placeholder="Entrez un mot-clef" required>
+            <!--placeholder : texet indicatif dans le champs de saisi; required : champs obligatoire-->
+            <!--Bouton de soumission-->
+            <button type="submit"> Rechercher</button>
+        </form>
+            <!--Div pour afficher les résultats de la recherche-->
+        <div id="resultats"></div>
+        <script>
+        
+        //Ajouter un gestionnaire d'évènement pour la soumission du formulaire//
+        document.getElementById('formulairerechercheJS').addEventListener('submit',function(event) {
+                event.preventDefault();//Empêcher le comportement par défault du formulaire//
+                const motRecherche = document.getElementById('recherchemot').value.toLowerCase();
+                //Obtenir le mot-clef en minuscule (recherche insensible à la casse)//
+                const resultats = document.getElementById('resultats'); //Div où les résultats seront affichés
+                resultats.innerHTML=``; //Réinitialiser le contenu des résultats//
+
+                //Listes des pages à rechercher//
+                const pages = ['Page 1.html', 'Média.html', 'Cérémonie.html'];
+                //Parcourir chaques pages pour effectuer la recherche//
+                pages.forEach(page=>{
+                    console.log("Recherche dans:", page);
+                    fetch(page)//Faire une requête pour obtenir le contenu de la page//
+                        .then(response=>response.text())//Convertir la réponse en texte
+                        .then(data=>
+                        {
+                            //Vérifier si le mot est présent dans le contenu de la page (converti en minuscule)
+                            //Vérifier si le mot-clef est présent dans le contenu de la page//
+                            if(data.toLowerCase().includes(motRecherche))
+                            {
+                                console.log(`Mot-clef trouvé dans ${page}`);
+                                //Si trouvé, ajouter un lien vers la page dans les résultats//
+                                resultats.innerHTML += `<div><a href="${page}">${page}: Mot-clef trouvé</a></div>`;
+                            }
+                            else{
+                                console.log(`Mot-clef non trouvé ${page}`);
+                                //Si non trouvé, indiquer que le mot-clef n'est pas présent//
+                                resultats.innerHTML += `<div>${page}: Mot-clef non trouvé</div>`;
+                                }
+                        })
+                        .catch((error)=>
+                        {
+                            //En cas d'erreur lors de la récupération de la page, afficher un message d'erreur//
+                            console.error(`erreur lors de la récupération de la page:`,error);
+                            resultats.innerHTML += `<div>${page}: Erreur lors de la récupération de la page</div>`;
+                        });
+                });
+            });
+        </script>
+    </Body>
+</html>
